@@ -1,0 +1,40 @@
+<html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  </head>
+  <body>
+    <header id="header"></header>
+	<div class="start-btn-box">
+		<button id="adminregisterButton" class="registerButton">admin</button>
+		<button id="userregisterButton" class="registerButton">user</button>
+	</div>
+	<input type="text" id="username" class="username" placeholder="username" autocomplete="off"/><br><br>
+	<button id="send_name" class="registerButton">Register</button>
+	<!-- <input type="text" id="to" placeholder="to" class="username"/> -->
+	<!-- <button id="open-btn" class="registerButton">open chat</button> -->
+	<div class="chat-popup" id="clientForm">
+	  <form class="form-container" novalidate>
+		<h3>Chat with server</h3>
+		<div>
+		   <ul id="clientmessages">
+		   </ul>
+		</div>
+		<input placeholder="Type message.." class="message" id="message" name="msg" autocomplete="off"></input>
+	  </form>
+	</div>
+	<div id="waiting-msg">waiting to receive message from clients....</div>
+	<div class="chat-popup" id="serverForm">
+	  <form class="form-container" novalidate>
+		<h3>Chat with user</h3>
+		<div>
+		   <ul id="server-messages">
+		   </ul>
+		</div>
+		<input placeholder="Type message.." class="message" id="servermessage" name="msg" autocomplete="off"></input>
+	  </form>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="chat.js"></script>
+  </body>
+</html>
